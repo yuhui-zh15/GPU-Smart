@@ -17,7 +17,7 @@ def GetIdleGpuId():
         splitline = line.split('|')
         usage = splitline[-1].strip()
         if len(usage) == 0:
-            gpuid = int(splitline[0].split(' ')[1:-1])
+            gpuid = int(splitline[0].split(' ')[0][1:-1])
             idleid.append(gpuid)
     return idleid
 
