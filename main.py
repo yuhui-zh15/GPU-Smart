@@ -22,5 +22,10 @@ def GetIdleGpuId():
     return idleid
 
 
+def RunCommandOnIdle(command):
+    idleid = GetIdleGpuId()
+    if len(idleid) == 0: return
+    os.system('CUDA_VISIBLE_DEVICES=%s %s' % (idleid[0], command))
+
 if __name__ == '__main__':
-    print GetIdleGpuId()
+    RunCommandOnIdle('python idle.py')
