@@ -4,6 +4,14 @@
 
 ## Version 1.0
 
+### Usage
+
+`python3 main.py`
+
+### Requirements
+
+gpustat==0.4.1
+
 ### Advantages:
 
 - [x] Interactive and easy to use
