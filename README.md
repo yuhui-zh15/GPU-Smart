@@ -2,7 +2,7 @@
 
 ###### Author: Yuhui Zhang, yuhui-zh15@mails.tsinghua.edu.cn, www.yuhui.ac.cn, Tsinghua University
 
-## Version 1.0
+## Version 1.1
 
 ### Usage
 
@@ -20,6 +20,7 @@ gpustat==0.4.1
 - [x] No need to modify any part of your code
 - [x] Clearly show waiting lists and running history
 - [x] Concisely show GPU status: memory, temperature, usage, etc.
+- [x] Allow manually set number of GPUs reserved for others
 
 ### Menu
 ```
@@ -29,6 +30,7 @@ Welcome to Smart GPU Queue
 [2] Running History
 [3] Waiting List
 [4] GPU Status
+[5] Reserve Number
 --------------------------
 ```
 
@@ -64,4 +66,13 @@ python idle.py
 [1] Tesla K20c       | 44'C,   0 % |     0 /  4742 MB |
 [2] Tesla K20c       | 43'C,   0 % |     0 /  4742 MB |
 [3] Tesla K20c       | 39'C,  96 % |     0 /  4742 MB |
+```
+
+### Reserve Number
+```
+Current Reserve Number: 0
+Please input how many GPUs you want to reserve
+<Number Here>
+2
+Set successfully
 ```
