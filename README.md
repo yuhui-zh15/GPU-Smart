@@ -31,7 +31,7 @@ python idle.py
 [3]{GPU: 3}(Thu Aug 23 08:11:06 2018->Thu Aug 23 08:15:03 2018): python idle.py
 ```
 
-# Waiting List
+### Waiting List
 ```
 <Task ID>{Enqueue Time}: Command
 [0](Thu Aug 23 08:10:54 2018): python idle.py
@@ -40,7 +40,7 @@ python idle.py
 [3](Thu Aug 23 08:11:06 2018): python idle.py
 ```
 
-# GPU Status
+### GPU Status
 ```
 <Server>  Thu Aug 23 10:27:52 2018
 [0] Tesla K20c       | 43'C,   0 % |     0 /  4742 MB |
