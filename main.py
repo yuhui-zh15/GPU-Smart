@@ -12,6 +12,7 @@ class Allocator(threading.Thread):
         threading.Thread.__init__(self)
         self.running_hist = []
         self.waiting_list = []
+        self.reserve_num = 0
 
     '''
     arthur1  Wed Aug 22 15:29:01 2018
@@ -34,7 +35,7 @@ class Allocator(threading.Thread):
     def Execute(self):
         if len(self.waiting_list) == 0: return
         idleid = self.GetIdleId()
-        if len(idleid) == 0: return
+        if len(idleid) <= self.reserve_num: return
         command = self.waiting_list.pop(0)
         command.append(idleid[0])
         command.append(time.asctime())
@@ -73,7 +74,8 @@ def controller(allocator):
         print('[2] Running History')
         print('[3] Waiting List')
         print('[4] GPU Status')
-        # print('[5] Exit')
+        print('[5] Reserve Number')
+        # print('[6] Exit')
         print('--------------------------')
         cid = input('Please input command ID\n')
         if cid == '1':
@@ -85,8 +87,20 @@ def controller(allocator):
             allocator.ShowWaitList()
         elif cid == '4':
             os.system('gpustat')
+        elif cid == '5':
+            print('Current Reserve Number: %s' % (allocator.reserve_num))
+            num = input('Please input how many GPUs you want to reserve\n')
+            try:
+                num = int(num)
+                if num >= 0:
+                    allocator.reserve_num = num
+                    print('Set successfully')
+                else:
+                    print('Reserve Number must >= 0')
+            except:
+                print('Please input integer')
         # No way to stop...
-        # elif cid == '5':
+        # elif cid == '6':
         #     i = input('[Warning]: Please make sure no running process! [Y/N]\n')
         #     if i == 'Y':
         #         exit(0)
