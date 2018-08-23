@@ -1,8 +1,17 @@
 # G-Smart: Interactive Automatic GPU Manager
 
-###### Author: Yuhui Zhang, yuhui-zh15@mails.tsinghua.edu.cn, Tsinghua University
+###### Author: Yuhui Zhang, yuhui-zh15@mails.tsinghua.edu.cn, www.yuhui.ac.cn, Tsinghua University
 
 ## Version 1.0
+
+### Advantages:
+
+- [x] Interactive and easy to use
+- [x] Simply add bash command into your waiting lists
+- [x] Automatically detect and select idle GPU to run command in your waiting lists
+- [x] No need to modify any part of your code
+- [x] Clearly show waiting lists and running history
+- [x] Concisely show GPU status: memory, temperature, usage, etc.
 
 ### Menu
 ```
