@@ -1,4 +1,4 @@
-# G-Smart: Interactive Automatic GPU Manager
+# GPU-Smart: Interactive Automatic GPU Manager
 
 ###### Author: Yuhui Zhang, yuhui-zh15@mails.tsinghua.edu.cn, www.yuhui.ac.cn, Tsinghua University
 
