@@ -1,4 +1,4 @@
-# G-Smart: Interactive Automatic GPU Allocator
+# G-Smart: Interactive Automatic GPU Manager
 
 ###### Author: Yuhui Zhang, yuhui-zh15@mails.tsinghua.edu.cn, Tsinghua University
 
